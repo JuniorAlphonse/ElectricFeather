@@ -39,4 +39,4 @@ def graph_function_paiger(list2, array_two, list3):
         for i in range(len(list3)):
             print(i, list3);
 
-graph_function_paiger([1], ["I love you"], list3)
+graph_function_paiger([1], ["I love you"], list3);
