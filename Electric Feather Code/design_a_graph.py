@@ -2,8 +2,13 @@
 
 ## The goal of this program is to, hopefully, generate images, or better yet pictographs, without the manual input of using a pre-existing human generated image database. Essentially, the code will have the capacity to generate images just from intergalatic search engine (like Google but not just using Earth satellites).
 
+### The intention of this graphing software to maintain healthy understanding of cancer cell progression and to use the intuitive understanding Euler's Identity and The Unit Circle to graph one set of cancer cell data and compare it to current treated cells.
+
 import math
 import cmath
+import matplotlib
+
+from matplotlib import pyplot
 
 pi = math.pi;
 # print(pi);
@@ -11,7 +16,7 @@ pi = math.pi;
 i = cmath.sqrt(-1);
 e = i**2;
 originallist = [];
-array = {(1/2), 1.00, 2.00, 3.00, e, i};
+array = [(1/2), 1.00, 2.00, 3.00, e, i];
 
 def graph_function_zipper(list, array):
     if list == []:
@@ -25,7 +30,7 @@ def graph_function_zipper(list, array):
 graph_function_zipper([], array);
 
 list2 = array;
-array_two = {(2**0/2**1), 1.0, 1.9, 9.8, 8.29, 9.84};
+array_two = [(2**0/2**1), 1.0, 1.9, 9.8, 8.29, 9.84];
 list3 = list(zip(list2, array_two));
 # Erroneous Logic based on the definition of list using curly brackets, which are typically used to create dictionaries. list4 = [i * array_two.index(9.84) in array_two];
 
@@ -40,3 +45,10 @@ def graph_function_paiger(list2, array_two, list3):
             print(i, list3);
 
 graph_function_paiger([1], ["I love you"], list3);
+
+pyplot.plot(array, array_two);
+
+pyplot.title('array vs array_two');
+pyplot.xlabel('array');
+pyplot.ylabel('array_two');
+pyplot.show();
