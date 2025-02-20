@@ -46,9 +46,13 @@ def graph_function_paiger(list2, array_two, list3):
 
 graph_function_paiger([1], ["I love you"], list3);
 
-pyplot.plot(array, array_two);
+
+euler_function_array = (e*array_two);
+
+pyplot.plot(array, array_two, 'euler_function');
 
 pyplot.title('array vs array_two');
 pyplot.xlabel('array');
 pyplot.ylabel('array_two');
+pyplot.zlabel('euler_function');
 pyplot.show();
